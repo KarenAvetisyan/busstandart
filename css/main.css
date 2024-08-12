@@ -1261,7 +1261,7 @@ body {
 
 .modal.active {
   visibility: visible;
-  opacity: 1;
+  opacity: 1!important;
 }
 
 .modal.active .m-container {
