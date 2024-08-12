@@ -16,7 +16,27 @@ document.addEventListener('DOMContentLoaded', function(){
             e.target.closest('.modal').classList.remove('active');
         }
     });
-    // tabs 
+    // observer, анимация на скролле 
+    const inViewport = (element, observer) => {
+        element.forEach(entry => {
+            entry.target.classList.toggle("is-inViewport", entry.isIntersecting);
+            element.forEach(item => {
+            if(item.target.classList.contains('is-inViewport') && !item.target.classList.contains('watched')){
+                item.target.classList.add("watched");
+            }
+            })
+        });
+    };
+    let ioConfiguration = {
+    rootMargin: '0% 0% 0% 0%',
+    threshold: 0.2
+    };
+    const Obs = new IntersectionObserver(inViewport, ioConfiguration);
+    const obsOptions = {}; //See: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
+    const ELs_inViewport = document.querySelectorAll('[data-inviewport]');
+    ELs_inViewport.forEach(EL => {
+    Obs.observe(EL, obsOptions);
+    });
     document.querySelectorAll(".tab--box").forEach(c=>{
         const cardClassName = "tab--box";
         const tabDataAttributeName = "data-tab-id";
@@ -89,29 +109,9 @@ document.addEventListener('DOMContentLoaded', function(){
             tab.addEventListener("click", () => changeTab(tab));
         });
     
+        window.addEventListener("load", () => updateSectionsContainerHeight());
         window.addEventListener("resize", () => updateSectionsContainerHeight());
         })();
     })
-        // observer, анимация на скролле 
-        // const inViewport = (element, observer) => {
-        //     element.forEach(entry => {
-        //         entry.target.classList.toggle("is-inViewport", entry.isIntersecting);
-        //         element.forEach(item => {
-        //         if(item.target.classList.contains('is-inViewport') && !item.target.classList.contains('watched')){
-        //             item.target.classList.add("watched");
-        //         }
-        //         })
-        //     });
-        // };
-        // let ioConfiguration = {
-        // rootMargin: '0% 0% 0% 0%',
-        // threshold: 0.2
-        // };
-        // const Obs = new IntersectionObserver(inViewport, ioConfiguration);
-        // const obsOptions = {}; //See: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
-        // const ELs_inViewport = document.querySelectorAll('[data-inviewport]');
-        // ELs_inViewport.forEach(EL => {
-        // Obs.observe(EL, obsOptions);
-        // });
 
 })

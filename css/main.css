@@ -22,6 +22,8 @@ body {
   margin: 0;
 }
 
+
+
 .primary--btn {
   background-color: var(--green);
   border-radius: 50px;
@@ -216,14 +218,19 @@ body {
   right: 0;
   margin: auto;
   width: 1px;
-  height: 100%;
+  height: 0;
   background-color: #D9D9D9;
+  transition: 1s;
+}
+.sc-history .history__wrap.watched:before{
+  height: 100%;
 }
 .sc-history .history__wrap::after {
   content: "";
   position: absolute;
   width: 16px;
   height: 16px;
+  transform: scale(0);
   top: 20px;
   left: 0;
   right: 0;
@@ -231,6 +238,11 @@ body {
   border-radius: 100%;
   background-color: #D9D9D9;
   display: inline-block;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+.sc-history .history__wrap.watched::after {
+  transform: none;
 }
 .sc-history .history__wrap:nth-of-type(even) .history__box {
   margin-left: auto;
@@ -496,20 +508,24 @@ body {
 .sc-park .tab--box__tab strong {
   font-weight: 600;
 }
+.sc-park .tab--box__section{
+  padding-top: 0!important;
+}
 .sc-park .bus__wrap {
   display: flex;
   flex-wrap: wrap;
   width: calc(100% + 30px);
   margin-left: -15px;
   padding-top: 40px;
+  padding-bottom: 20px;
 }
 .sc-park .bus__box {
   width: calc(33.3333333% - 30px);
   margin-left: 15px;
   margin-right: 15px;
   background-color: #F5F5F5;
-  margin-bottom: 30px;
   position: relative;
+  border-bottom: 10px solid #fff;
 }
 .sc-park .bus__img {
   display: inline-block;
@@ -590,6 +606,9 @@ body {
 }
 .sc-park .bus__characts .icon-box img {
   max-width: 100%;
+}
+.sc-park .bus__characts-info{
+  z-index: 1;
 }
 .sc-park .bus__characts-info.info__left .small__img {
   width: 144px;
@@ -1081,6 +1100,7 @@ body {
   margin: auto;
   transform: rotate(25deg);
   z-index: -1;
+  transition-delay: 0.8s;
 }
 
 .tab--box {
@@ -1422,13 +1442,12 @@ body {
     width: calc(33.3333333% - 10px);
     margin-left: 5px;
     margin-right: 5px;
-    margin-bottom: 10px;
   }
   .sc-park .bus__img {
     height: 163px;
   }
   .sc-park .all__variants {
-    margin-top: 10px;
+    margin-top: 5px;
   }
   .sc-park .bus__characts .col__2 {
     order: 1;
@@ -1444,11 +1463,13 @@ body {
   .sc-park .bus__characts .mob__text {
     padding-left: 80px;
     margin-bottom: 22px;
+    position: relative;
+    z-index: 2;
   }
   .sc-park .bus__characts .mob__text .icon-box {
     top: auto;
     left: 50px;
-    bottom: -16px;
+    bottom: -38px;
   }
   .sc-park .bus__characts-img {
     height: auto;
