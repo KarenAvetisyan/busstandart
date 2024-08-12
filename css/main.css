@@ -1137,6 +1137,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  padding: inherit;
   transition: all 150ms 350ms ease-in-out;
 }
 
@@ -1659,6 +1660,7 @@ body {
   .sc-park .tab--box__section {
     width: calc(100% + 20px);
     margin-left: -10px;
+    padding-top: 0!important;
     overflow: hidden;
   }
   .sc-park .bus__wrap {
