@@ -501,6 +501,7 @@ body {
   flex-wrap: wrap;
   width: calc(100% + 30px);
   margin-left: -15px;
+  padding-top: 40px;
 }
 .sc-park .bus__box {
   width: calc(33.3333333% - 30px);
@@ -1135,7 +1136,6 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  padding: inherit;
   width: 100%;
   transition: all 150ms 350ms ease-in-out;
 }
