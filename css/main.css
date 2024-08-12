@@ -580,6 +580,9 @@ body {
 .sc-park .bus__characts {
   margin-top: 44px;
 }
+.sc-park .col-mob{
+  z-index: 2;
+}
 .sc-park .bus__characts h4 {
   font-weight: 600;
   font-size: 24px;

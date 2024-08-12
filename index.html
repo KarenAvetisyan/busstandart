@@ -7,7 +7,7 @@
     <meta name="description" content="Put your description here.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/critical.css">
-    <link rel="preload" href="css/grid.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="css/grid.css" as="style" onload="this.rel='stylesheet'"><!-- ПРОСТАЯ СЕТКА, НЕ ФРЕЙМВОРК  -->
     <link rel="preload" href="css/main.css" as="style" onload="this.rel='stylesheet'">
 </head>
 <body>
@@ -216,7 +216,7 @@
                         </ul>
                     </div>
                     <div class="col-12">
-                        <div class="heading"><h3>Основные виды транспортных средств для выбора машины с нужными характеристиками:</h3></div>
+                        <div class="heading" data-inviewport="obs__slide-up"><h3>Основные виды транспортных средств для выбора машины с нужными характеристиками:</h3></div>
                         <div class="tab--box" data-inviewport="obs__slide-up">
                             <div class="tab__wrapper">
                               <div data-tab-id="tab-1" class="tab--box__tab tab--box__tab--active"><strong>Автобусы</strong> Foxbus, Yutong, Scanie Touring, Neoplan <span class="sits">	25 - 70 мест</span></div>
@@ -370,30 +370,38 @@
                             <div class="col-12 d-mx-lg" data-inviewport="obs__slide-up">
                                 <h4>Гарантия комфорта и безопасности</h4>
                             </div>
-                            <div class="col-6 d-mx-lg" data-inviewport="obs__slide-up">
-                                <p class="mob__text">Комфортабельные салоны <i class="icon-box"><img loading="lazy" src="img/svg/bus-icon.svg" alt="автобус"></i></p>
-                            </div>
-                            <div class="col-6 d-mx-lg" data-inviewport="obs__slide-up">
-                                <p class="mob__text">Регулярный техосмотр <i class="icon-box"><img loading="lazy" src="img/svg/search-icon.svg" alt="техосмотр"></i></p>
-                            </div>
-                            <div class="col-lg-3 col-6 col__1">
-                                <div class="bus__characts-info info__left" data-inviewport="obs__slide-left">
-                                    <div class="small__img"><img loading="lazy" src="img/sits.webp" alt="Мягкие сиденья"></div>
-                                    <p>Мягкие откидывающиеся и раздвижные сиденья <i class="icon-box"><img loading="lazy" src="img/svg/sit-icon.svg" alt="сиденья"></i></p>
-                                    <p class="d-mn-lg">Комфортабельные салоны <i class="icon-box"><img loading="lazy" src="img/svg/bus-icon.svg" alt="автобус"></i></p>
+                            <div class="col-12 d-mx-lg col-mob">
+                                <div class="row">
+                                    <div class="col-6" data-inviewport="obs__slide-up">
+                                        <p class="mob__text">Комфортабельные салоны <i class="icon-box"><img loading="lazy" src="img/svg/bus-icon.svg" alt="автобус"></i></p>
+                                    </div>
+                                    <div class="col-6" data-inviewport="obs__slide-up">
+                                        <p class="mob__text">Регулярный техосмотр <i class="icon-box"><img loading="lazy" src="img/svg/search-icon.svg" alt="техосмотр"></i></p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col__2">
-                                <div class="bus__characts-img" data-inviewport="obs__slide-up">
-                                    <img loading="lazy" src="img/charact-bus.webp" alt="автобус">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-6 col__3">
-                                <div class="bus__characts-info info__right" data-inviewport="obs__slide-right">
-                                    <h4 class="d-mn-lg">Гарантия комфорта и безопасности</h4>
-                                    <div class="small__img"><img loading="lazy" src="img/climat-control.webp" alt="климат-контрол"></div>
-                                    <p>Системы климат-контроля <i class="icon-box pl"><img loading="lazy" src="img/svg/temp-icon.svg" alt="климат"></i></p>
-                                    <p class="d-mn-lg">Регулярный техосмотр <i class="icon-box"><img loading="lazy" src="img/svg/search-icon.svg" alt="техосмотр"></i></p>
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-lg-3 col-6 col__1">
+                                        <div class="bus__characts-info info__left" data-inviewport="obs__slide-up">
+                                            <div class="small__img"><img loading="lazy" src="img/sits.webp" alt="Мягкие сиденья"></div>
+                                            <p>Мягкие откидывающиеся и раздвижные сиденья <i class="icon-box"><img loading="lazy" src="img/svg/sit-icon.svg" alt="сиденья"></i></p>
+                                            <p class="d-mn-lg">Комфортабельные салоны <i class="icon-box"><img loading="lazy" src="img/svg/bus-icon.svg" alt="автобус"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col__2">
+                                        <div class="bus__characts-img">
+                                            <img loading="lazy" src="img/charact-bus.webp" alt="автобус">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-6 col__3">
+                                        <div class="bus__characts-info info__right" data-inviewport="obs__slide-up">
+                                            <h4 class="d-mn-lg">Гарантия комфорта и безопасности</h4>
+                                            <div class="small__img"><img loading="lazy" src="img/climat-control.webp" alt="климат-контрол"></div>
+                                            <p>Системы климат-контроля <i class="icon-box pl"><img loading="lazy" src="img/svg/temp-icon.svg" alt="климат"></i></p>
+                                            <p class="d-mn-lg">Регулярный техосмотр <i class="icon-box"><img loading="lazy" src="img/svg/search-icon.svg" alt="техосмотр"></i></p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
